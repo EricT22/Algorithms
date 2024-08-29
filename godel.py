@@ -51,8 +51,6 @@ def prime_factors(num):
     if num > 1:
         prime_factors.append(num)
 
-
-
     return prime_factors
 
 
