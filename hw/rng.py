@@ -22,7 +22,7 @@ class RNG:
         return (self._next() % upper_bound) + 1
     
 
-# testing to make sure it works
+# testing to make sure it works (just look through)
 # rng = RNG(1)
 # arr = []
 # for i in range(5000):
