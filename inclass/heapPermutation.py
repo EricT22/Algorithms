@@ -1,4 +1,6 @@
 test = [1, 2, 3]
+N = len(test)
+
 
 def heapPermute(n):
     if n == 0:
@@ -18,6 +20,4 @@ def heapPermute(n):
 
 
 if __name__ == "__main__":
-    n = len(test)
-
-    heapPermute(n)
+    heapPermute(N)
