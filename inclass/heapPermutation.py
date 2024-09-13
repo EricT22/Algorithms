@@ -9,7 +9,7 @@ def heapPermute(n):
     else:
         for i in range(0, n, 1):
             # subdivision is reducing n by 1
-            # recurrence is n recursive calls
+            # heapPermute call is the recurrence
             heapPermute(n - 1)
             
             # recombination is swapping values
