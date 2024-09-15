@@ -51,7 +51,7 @@ class RecursiveFuncts(AbstractFuncts):
         elif len(word) == 1:
             return True
 
-        return word[0] == word[len() - 1] and RecursiveFuncts.is_palindrome(word[1 : len(word - 1)])
+        return word[0] == word[len(word) - 1] and RecursiveFuncts.is_palindrome(word[1 : len(word) - 1])
 
 
     @staticmethod
