@@ -27,7 +27,7 @@ class RecursiveFuncts(AbstractFuncts):
         elif len(string) == 1:
             return string
         
-        return string[len(string) - 1] + RecursiveFuncts.string_reversal(string[1 : len(string - 1)]) + string[0]
+        return string[len(string) - 1] + RecursiveFuncts.string_reversal(string[1 : len(string) - 1]) + string[0]
 
 
     @staticmethod
