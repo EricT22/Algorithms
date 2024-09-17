@@ -1,8 +1,5 @@
 from abstractFunctions import AbstractFuncts
 
-
-# TODO: Have to put the comments the prof wanted in the code
-
 class RecursiveFuncts(AbstractFuncts):
     @staticmethod
     def exponentiation(a:int, b:int):
