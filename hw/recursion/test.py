@@ -5,42 +5,42 @@ if __name__ == "__main__":
     # exponentiation
     a, b = 3, 2
     print("Recursion:")
-    print(RecursiveFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', RecursiveFuncts.exponentiation(a, b), sep="")
     print("Iteration:")
-    print(IterativeFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', IterativeFuncts.exponentiation(a, b), sep="")
 
     a, b = 3, -3
     print("Recursion:")
-    print(RecursiveFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', RecursiveFuncts.exponentiation(a, b), sep="")
     print("Iteration:")
-    print(IterativeFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', IterativeFuncts.exponentiation(a, b), sep="")
 
     a, b = -3, 5
     print("Recursion:")
-    print(RecursiveFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', RecursiveFuncts.exponentiation(a, b), sep="")
     print("Iteration:")
-    print(IterativeFuncts.exponentiation(a, b))
+    print(f'{a}^{b} = ', IterativeFuncts.exponentiation(a, b), sep="")
 
 
     print("-------------------------------------")
     # string reversal
     string = "Bob!"
     print("Recursion:")
-    print(RecursiveFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', RecursiveFuncts.string_reversal(string), sep="")
     print("Iteration:")
-    print(IterativeFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', IterativeFuncts.string_reversal(string), sep="")
 
     string = "palooza"
     print("Recursion:")
-    print(RecursiveFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', RecursiveFuncts.string_reversal(string), sep="")
     print("Iteration:")
-    print(IterativeFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', IterativeFuncts.string_reversal(string), sep="")
 
     string = "1racecar1"
     print("Recursion:")
-    print(RecursiveFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', RecursiveFuncts.string_reversal(string), sep="")
     print("Iteration:")
-    print(IterativeFuncts.string_reversal(string))
+    print(f'{string} reversed is: ', IterativeFuncts.string_reversal(string), sep="")
 
 
 
@@ -48,21 +48,21 @@ if __name__ == "__main__":
     # fibonacci
     n = 3
     print("Recursion:")
-    print(RecursiveFuncts.fibonacci(n))
+    print(f'F({n}) is: ', RecursiveFuncts.fibonacci(n), sep="")
     print("Iteration:")
-    print(IterativeFuncts.fibonacci(n))
+    print(f'F({n}) is: ', IterativeFuncts.fibonacci(n), sep="")
 
     n = 8
     print("Recursion:")
-    print(RecursiveFuncts.fibonacci(n))
+    print(f'F({n}) is: ', RecursiveFuncts.fibonacci(n), sep="")
     print("Iteration:")
-    print(IterativeFuncts.fibonacci(n))
+    print(f'F({n}) is: ', IterativeFuncts.fibonacci(n), sep="")
 
     n = 1
     print("Recursion:")
-    print(RecursiveFuncts.fibonacci(n))
+    print(f'F({n}) is: ', RecursiveFuncts.fibonacci(n), sep="")
     print("Iteration:")
-    print(IterativeFuncts.fibonacci(n))
+    print(f'F({n}) is: ', IterativeFuncts.fibonacci(n), sep="")
 
 
     print("-------------------------------------")
