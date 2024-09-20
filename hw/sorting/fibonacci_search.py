@@ -1,5 +1,4 @@
 from plot import plot
-import numpy as np
 
 EXCLUSIVE_I_BOUND = 11
 
