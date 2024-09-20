@@ -38,7 +38,7 @@ if __name__ == "__main__":
         test_arr = [x + 1 for x in range(N)]
         shuffle(test_arr)
 
-        for j in range(N):
+        for j in range(1, N + 1, 1):
             sequential_search(test_arr, j)
             avgs[i] += count
             count = 0
