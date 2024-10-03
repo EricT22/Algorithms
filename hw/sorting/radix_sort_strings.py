@@ -1,16 +1,4 @@
 def radix_sort(arr:list):
-    # radix = 10
-    # keysize = 3
-    # bucket = [[] for i in range(radix)]
-    # shift = 1
-    # for loop in range(keysize):
-    #     for entry in range(len(arr)):
-    #         bucketNum = (arr[entry] // shift) % radix
-    #         bucket[bucketNum].append(arr[entry])
-        
-    #     arr = combine_buckets(bucket)
-    #     shift = shift * 10
-
     maxlen = len(max(arr, key=len))
     arr = pad(arr, maxlen)
     bucket = [[] for i in range(128)] # 128 chars in the part of the ASCII table I care about
@@ -24,6 +12,21 @@ def radix_sort(arr:list):
 
     return strip(arr)
 
+
+def radix_sort_nums(arr:list):
+    radix = 10
+    keysize = 3
+    bucket = [[] for i in range(radix)]
+    shift = 1
+    for loop in range(keysize):
+        for entry in range(len(arr)):
+            bucketNum = (arr[entry] // shift) % radix
+            bucket[bucketNum].append(arr[entry])
+        
+        arr = combine_buckets(bucket)
+        shift = shift * 10
+
+    return arr
 
 def combine_buckets(bucket):
     comb = []
@@ -58,9 +61,9 @@ if __name__ == "__main__":
                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", 
                 "twenty"]
     
-    # numerical test (works)
+    # # numerical test (works)
     # arr = [310, 213, 130, 301, 222, 201, 111, 323, 330, 102, 231, 120]
     # # 102 111 120 130 201 213 222 231 301 310 323 330
-    # print(radix_sort(arr))
+    # print(radix_sort_nums(arr))
 
-    print(radix_sort(unsorted))
+    # print(radix_sort(unsorted))
