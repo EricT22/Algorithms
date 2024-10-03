@@ -45,9 +45,10 @@ def pad(arr:list, maxlen:int):
     return arr
 
 
-def strip(arr:list):
+def strip(arr:list[str]):
     for i in range(len(arr)):
-        arr[i] = arr[i].rstrip('-')
+        while arr[i][len(arr[i]) - 1] == '-':
+            arr[i] = arr[i][0:len(arr[i]) - 1]
 
     return arr
 
