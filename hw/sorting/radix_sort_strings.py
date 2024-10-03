@@ -66,4 +66,7 @@ if __name__ == "__main__":
     # # 102 111 120 130 201 213 222 231 301 310 323 330
     # print(radix_sort_nums(arr))
 
-    print(radix_sort(unsorted))
+    sorted = radix_sort(unsorted)
+
+    for e in sorted:
+        print(e)
