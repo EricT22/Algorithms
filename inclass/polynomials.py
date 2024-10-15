@@ -31,6 +31,17 @@ def evalpolybetter(coefs:list, x:float) -> float:
         mult_count += 1
 
 
+def horners_method(coefs:list, x:float) -> float:
+    deg = len(coefs) - 1
+    result = coefs[deg]
+    
+    for i in range(deg - 1, -1, -1):
+        result *= x
+        result += coefs[i]
+
+    return result
+
+
 if __name__ == "__main__":
     coefs = [1, 2, 6, 3, 7, 0, 5, 4]
     x = 1
