@@ -24,6 +24,24 @@ def binary_search(arr: list, target: int):
     
     return -1
 
+
+def rec_bin_search(arr:list, target:int, left:int=None, right:int=None):
+    left = 0 if left is None else left
+    right = len(arr) - 1 if right is None else right
+
+    if left > right:
+        return -1
+
+    mid = (right + left) // 2
+
+    if target > arr[mid]:
+        return rec_bin_search(arr, target, mid + 1, right)
+    elif target < arr[mid]:
+        return rec_bin_search(arr, target, left, mid - 1)
+    else:
+        return mid
+
+
 if __name__ == "__main__":
     avgs = [0 for x in range(EXCLUSIVE_I_BOUND)]
     n_vals = [0 for x in range(EXCLUSIVE_I_BOUND)]
