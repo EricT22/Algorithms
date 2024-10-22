@@ -2,7 +2,7 @@ def gauss_jordan_elim(mat):
     N = len(mat)
 
     for i in range(N):
-        for j in range(i + 1, N):
+        for j in range(i, N):
             if mat[j][i] != 0:
                 temp_row = mat[j]
                 mat[j] = mat[i]
@@ -11,8 +11,9 @@ def gauss_jordan_elim(mat):
         else:
             raise ValueError("This is a singular matrix")
 
+        divisor = mat[i][i]
         for j in range(N + 1):
-            mat[i][j] /= mat[i][i]
+            mat[i][j] /= divisor
 
         row_inds = list(range(N))
         row_inds.remove(i)
@@ -21,3 +22,13 @@ def gauss_jordan_elim(mat):
 
             for k in range(N + 1):
                 mat[j][k] -= multiplier * mat[i][k]
+
+    sol_set = []
+    for i in range(N):
+        sol_set.append(mat[i][N])
+    
+    return sol_set
+
+
+test_arr = [[2, 3, 4], [5, 1, 7]]
+print(gauss_jordan_elim(test_arr))
