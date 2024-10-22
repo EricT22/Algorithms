@@ -30,5 +30,6 @@ def gauss_jordan_elim(mat):
     return sol_set
 
 
-test_arr = [[2, 3, 4], [5, 1, 7]]
+# test_arr = [[2, 3, 4], [5, 1, 7]]
+test_arr = [[2, 1, 3, 5], [3, 4, 5, 6], [7, 5, 9, 2]]
 print(gauss_jordan_elim(test_arr))
