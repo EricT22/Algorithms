@@ -4,8 +4,9 @@ from data_fitting_matrix_methods import *
 
 DATA_FILE_PATH = 'C:\\Users\\Eric\\OneDrive\\Documents\\Algorithms\\hw\\numerical_algos\\NoisyPolynomialData.csv'
 
+STARTING_DEG = 1
 HIGHEST_DEG = 7
-DEGREES = [x for x in range(1, HIGHEST_DEG + 1)]
+DEGREES = [x for x in range(STARTING_DEG, HIGHEST_DEG + 1)]
 
 
 def plot_two_curves(x, y, z, x_label="", y_label="", title=""):
