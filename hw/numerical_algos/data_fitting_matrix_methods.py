@@ -67,3 +67,13 @@ def horners_method(coefs:list, x:float) -> float:
         result += coefs[i]
 
     return result
+
+
+def unsqueeze2D(mat2d):
+    mat1d = []
+
+    for i in range(len(mat2d)):
+        for j in range(len(mat2d[i])):
+            mat1d.append(mat2d[i][j])
+
+    return mat1d
