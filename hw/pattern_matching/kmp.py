@@ -55,10 +55,12 @@ def fail_links_zbased(sub):
 
 
 if __name__ == "__main__":
-    text = "hi a ababcb oijio"
+    texts = ["hi ab ababcb oijio", "hello", "", "ababcb"]
     sub = "ababcb"
 
     print(build_fail_links(sub))
     print(fail_links_zbased(sub))
     print(f'{"-" * 20}')
-    print(kmpmatch(text, sub))
+
+    for text in texts:
+        print(f'Substring found in the text:\n{text}\nAt index: {kmpmatch(text, sub)}')
