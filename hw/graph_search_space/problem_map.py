@@ -168,10 +168,10 @@ class Map():
                     node_visited = False
 
                 if not node_visited:
-                    # if n is on the open queue and its new f score is less than the f score on the open queue, replace it
+                    # if n is on the open queue and its new g score is less than the g score on the open queue, replace it
                     # otherwise append it to the open queue
                     for node in open_queue:
-                        if node.cur == n.cur and n.fscore < node.fscore:
+                        if node.cur == n.cur and n.gscore < node.gscore:
                             open_queue.pop(open_queue.index(node))
                             open_queue.append(n)
                             break
