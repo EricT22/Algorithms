@@ -132,8 +132,9 @@ class Map():
             c :Node = min(open_queue, key=lambda node: node.fscore)
             open_queue.remove(c)
 
-            # if c.cur == target:
-            #     return self._trace_path(closed_queue, c)
+            # if this node is the target, trace the path
+            if c.cur == target:
+                return self._trace_path(closed_queue, c)
 
             # add c to closed queue
             closed_queue.append(c)
@@ -155,8 +156,8 @@ class Map():
                 n = Node((nx, ny), c.cur, n_fscore, n_gscore, n_hscore)
 
                 # if this node is the target, trace the path
-                if n.cur == target:
-                    return self._trace_path(closed_queue, n)
+                # if n.cur == target:
+                #     return self._trace_path(closed_queue, n)
                 
 
                 # finding out whether or not node is already on the closed queue
