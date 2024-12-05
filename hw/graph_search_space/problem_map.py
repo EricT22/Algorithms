@@ -1,6 +1,7 @@
 from edge import Edge
 from queue import Queue
 from collections import namedtuple
+import math
 
 class Map():
     WALL = -1
@@ -149,7 +150,7 @@ class Map():
                 # gets cost, which is stored in the next variable (of type Edge)
                 n_gscore = next.get_costFrom()
                 # calculates Manhattan distance
-                n_hscore = abs(nx - target[0]) + abs(ny - target[1])
+                n_hscore = self.manhattan_dist(nx, ny, target[0], target[1])
                 n_fscore = n_gscore + n_hscore
 
                 # format n to be a Node, set parent to node c 
@@ -178,6 +179,14 @@ class Map():
                             break
                     else:
                         open_queue.append(n)
+
+
+    def manhattan_dist(self, cx, cy, tx, ty):
+        return abs(cx - tx) + abs(cy - ty)
+    
+
+    def euclidean_dist(self, cx, cy, tx, ty):
+        return math.sqrt(pow((cx - tx), 2) + pow((cy - ty), 2))
 
     
     def _trace_path(self, closed_queue, n):
